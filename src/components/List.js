@@ -5,7 +5,7 @@ function List({ todos,todoEdit,completed,deleteTodo}) {
   return (
     
     <>
-      <div className='row'>
+      <div className={styles.row}>
         <div className={styles.listGroup}>
           {todos.map((todo, index) => (
             <div key={index} className={classNames(styles.listGroupItem, styles.mb5, styles.f15)}>
