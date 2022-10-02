@@ -1,5 +1,5 @@
 import  { useState } from 'react'
-import './App.css'
+import styles from './app.module.css'
 import Form from './components/Form'
 import List from './components/List'
 
@@ -42,7 +42,7 @@ function App() {
     setTodos(todos.filter(todo=>todo.id!==id))
   }
   return (
-    <div className='container'>
+    <div className={styles.container}>
       <Form todos={todos} setTodos={setTodos} setInputEdit={setInputEdit} inputedit={inputedit} input={input} setInput={setInput} todoUpdate={todoUpdate} />
       <List deleteTodo={deleteTodo} completed={completed}   todos={todos} todoEdit={todoEdit}  />
     </div>

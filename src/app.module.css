@@ -92,52 +92,52 @@ input:focus{
   cursor: pointer;
   margin-left:2px;
 }
-.btn-primary{
+.btnPrimary{
   background-color: #dfe5ea;
   border:1px solid #f4f7f9;
   color: rgb(144, 142, 142);
 }
-.btn-secondary{
+.btnSecondary{
   background-color: #007bff;
   border:1px solid rgb(87, 121, 233);
   color: #fff;
 }
-.btn-danger{
+.btnDanger{
   background-color: #d81309;
   border:1px solid #eb463d;
   color: #fff;
 }
-.btn-green{
+.btnGreen{
   background-color: #18c82c;
   border:1px solid #4ad65b;
   color: #fff;
-}.btn-green-disabled{
+}.btnGreenDisabled{
   background-color: #7ddf88;
   border:1px solid #c2e7c6;
   color: #fff;
 }
-.f-15{
+.f15{
   font-size: 1.5rem;
 }
-.f-12{
+.f12{
   font-size: 1.2rem;
 }
-.m-l-5{
+.ml5{
   margin-left: 5px;
 }
-.m-b-5{
+.mb5{
   margin-bottom: 5px;
 }
-.line-through{
+.lineThrough{
   text-decoration: line-through;
 }
-.list-group{
+.listGroup{
   font-size:1.5rem;
   text-align: left;
   margin-top:10px;
   box-sizing: border-box;
 }
-.list-group-item{
+.listGroupItem{
   display: flex;
   justify-content:space-between ;
   padding:5px;

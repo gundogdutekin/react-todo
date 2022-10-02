@@ -1,4 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
+import styles from '../app.module.css'
+import classNames  from "classnames";
 function Form({
   todos,
   setTodos,
@@ -6,7 +8,7 @@ function Form({
   setInput,
   inputedit,
   todoUpdate,
-  setInputEdit,
+ 
 }) {
   const addTodo = (e) => {
     e.preventDefault()
@@ -17,19 +19,18 @@ function Form({
     <div>
       <h1>todos</h1>
 
-      <div className='row'>
+      <div className={classNames(styles.row)}>
         <form>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className='text-input'
             placeholder='What needs to be done?'
           />
           {!inputedit.id ? (
             <button
               onClick={addTodo}
               title='Ekle'
-              className='btn btn-secondary f-15'
+              className={classNames(styles.btn,styles.btnSecondary,styles.f15)}
             >
               Add
             </button>
@@ -38,7 +39,7 @@ function Form({
             <button
               onClick={todoUpdate}
               title='Ekle'
-              className='btn btn-secondary f-15'
+              className={classNames(styles.btn, styles.btnSecondary,styles.f15)}
             >
               Update
             </button>

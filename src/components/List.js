@@ -1,17 +1,19 @@
+import styles from '../app.module.css'
+import classNames  from "classnames";
 function List({ todos,todoEdit,completed,deleteTodo}) {
   
   return (
     
     <>
       <div className='row'>
-        <div className='list-group'>
+        <div className={styles.listGroup}>
           {todos.map((todo, index) => (
-            <div key={index} className='list-group-item m-b-5 f-15'>
-              <span className={todo.completed ? 'line-through' :''}>{todo.title}</span>
-              <span className='m-l-5'>
-                <button  id={todo.id} onClick={todoEdit} title="Düzenle" className='btn btn-secondary f-12 '>✎</button>
-                <button  disabled={todo.completed} title={todo.completed?'Tamamlandı':'Tamamla'} onClick={()=>completed(todo.id)} className={!todo.completed?'btn btn-green f-12':'btn btn-green-disabled f-12'}> ✔</button> 
-                <button title='Sil' onClick={()=>deleteTodo(todo.id)} className='btn btn-danger f-12'> ✖</button>
+            <div key={index} className={classNames(styles.listGroupItem, styles.mb5, styles.f15)}>
+              <span className={todo.completed ? styles.lineThrough :''}>{todo.title}</span>
+              <span className={styles.ml5}>
+                <button  id={todo.id} onClick={todoEdit} title="Düzenle" className={classNames(styles.btn, styles.btnSecondary, styles.f12)}>✎</button>
+                <button  disabled={todo.completed} title={todo.completed?'Tamamlandı':'Tamamla'} onClick={()=>completed(todo.id)} className={!todo.completed?classNames(styles.btn,styles,styles.btnGreen,styles.f12):classNames(styles.btn, styles.btnGreenDisabled, styles.f12)}> ✔</button> 
+                <button title='Sil' onClick={()=>deleteTodo(todo.id)} className={classNames(styles.btn, styles.btnDanger, styles.f12)}> ✖</button>
                 
               </span>
             </div>
