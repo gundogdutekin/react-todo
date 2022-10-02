@@ -19,7 +19,7 @@ function Form({
     <div>
       <h1>todos</h1>
 
-      <div className={classNames(styles.row)}>
+      <div className={styles.row}>
         <form>
           <input
             value={input}
